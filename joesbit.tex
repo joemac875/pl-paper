@@ -1,0 +1,17 @@
+\section{Background}
+
+Smalltalk development began in 1969 at Xerox's Palo Alto Research Center (PARC); its creation was motivated by a desire to place computational power in the hands of people who are not professional computer scientists \cite{bitsandpieces}. At the time, the personal computer market was primed to explode, but there was a very small supply of application experts. Smalltalk would bridge the gap and allow users outside of institutions to develop applications using their personal computers. 
+
+Alan Kay spearheaded the design and implementation of the language (he claims to have written one of the earliest versions of Smalltalk in just a few days after a bet that the most powerful language could fit on just one page!), but an entire team at PARC was responsible for its development through the 1970s \cite{alankay}. Smalltalk finally went public in 1980 when Xerox disseminated information about Smalltalk to six major computer manufacturers. The manufacturers were sent introductory articles, a book detailing Smalltalk's system specifcations, and a magnetic tape containing a partial implementation of the Smalltalk system. Of these companies, four\footnote{Apple Computer, Digital Equipment Corporation, Hewlett- Packard, and Tektronix} assisted in the formal specification and implementation of the system, which was released as Smalltalk-80.
+
+Due to its positive reception and the fact that Xerox gave these companies the rights to use Smalltalk-80 in their products, Smalltalk diffused across the programming community. As an object-oriented language, Smalltalk is used in any context where other object-oriented languages  (like Java or C++) are used. In today's age, this is the majority of software development. Concrete examples of this include Lesser Software, who uses Smalltalk for Windows application development, and eXept, who uses Smalltalk in its automated testing products \cite{exept} \cite{lesser}.
+
+\section{Installation}
+
+As a result of continued develop over the decades, many dialects of Smalltalk exist today \cite{something}. Despite presence of dialects like Squeak and Pharo, which are accompanied by fully fledged development environments (similar to Dr. Racket), this paper implements its code section using GNU Smalltalk (GST), whose usage is more in line with popular interpreted languages. Its programs are loaded in the interpreter through text files instead of using a GUI.
+
+Precompiled binaries of GST can be installed on Mac OSX using \textbf{brew install gnu-smalltalk} or Debian systems using \textbf{apt install gnu-smalltalk}. Once installed, the binary can be run using the \textbf{gst} command. If any number of files are given to the command as arguments, then their contents are interpreted. If no files are given as arguments however, the interpreter begins running as a read-eval-print loop.
+
+\section{Syntax}
+
+Yes it fits on a postcard! \cite{http://pharo.org/about}
