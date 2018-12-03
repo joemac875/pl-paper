@@ -1,0 +1,42 @@
+\documentclass{beamer}
+\usepackage{dejavu}
+\usepackage{amssymb}
+\usepackage{listings}
+
+\usetheme{Berlin}
+\usecolortheme{beaver}
+\beamertemplatenavigationsymbolsempty
+\usepackage[utf8]{inputenc}
+\title{A Small Talk about Smalltalk}
+\author{Joe MacInnes and Phillip Wells}
+\institute[College of Wooster]
+{
+  College of Wooster\\
+  Programming Languages
+}
+\date{5 December 2018}
+
+\begin{document}
+\frame{\titlepage}
+\section{Section name here}
+
+\begin{frame}
+  \frametitle{This is the title of the slide}
+\end{frame}
+
+\begin{frame}[fragile] 
+  \frametitle{Fragile lets you use code listing}
+
+  \begin{lstlisting}[frame=single]
+    'hello, world!' printNl !
+  \end{lstlisting}
+
+  And some more text
+
+\end{frame}
+
+
+\section{References} 
+\bibliographystyle{acm}
+\bibliography{references}
+\end{document}
