@@ -2,6 +2,9 @@
 \usepackage{dejavu}
 \usepackage{amssymb}
 \usepackage{listings}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+
 
 \usetheme{Berlin}
 \usecolortheme{beaver}
@@ -18,11 +21,40 @@
 
 \begin{document}
 \frame{\titlepage}
-\section{Section name here}
+\section{Fluffy Stuffy}
 
 \begin{frame}
-  \frametitle{This is the title of the slide}
+  \frametitle{History}
+  	\begin{itemize}
+	\item Developed on the cusp of the the PC explosion
+	\item Designed for simplicity
+	\item Alan Kay at Xerox PARC in 1969
+	\item Smalltalk-80 enters the public realm
+	\item General purpose programming language
+	\end{itemize}
+  	
 \end{frame}
+
+\begin{frame}
+  \frametitle{Philosophy}
+  	\begin{itemize}
+	\item (almost) Everything is an object
+	\item Numbers, arrays, and dictionaries are objects
+	\item Message Passing
+	\end{itemize}
+\begin{columns}[t]
+\begin{column}{.1\textwidth}
+\adjincludegraphics[width=4cm,valign=t]{object.png}
+\end{column}
+\begin{column}{.3\textwidth}
+\adjincludegraphics[width=5cm,valign=t]{messagepassing.png}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+\section{Language Features}
 
 \begin{frame}[fragile] 
   \frametitle{Fragile lets you use code listing}
