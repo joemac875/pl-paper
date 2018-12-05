@@ -1,21 +1,79 @@
 \section{Background}
 
-Smalltalk development began in 1969 at Xerox's Palo Alto Research Center (PARC); its creation was motivated by a desire to place computational power in the hands of people who are not professional computer scientists \cite{bitsandpieces}. At the time, the personal computer market was primed to explode, but there was a very small supply of application experts. Smalltalk would bridge the gap and allow users outside of institutions to develop applications using their personal computers. 
+Smalltalk development began in 1969 at Xerox's Palo Alto Research
+Center (PARC); its creation was motivated by a desire to place
+computational power in the hands of people who are not professional
+computer scientists \cite{bitsandpieces}. At the time, the personal
+computer market was primed to explode, but there was a very small
+supply of application experts. Smalltalk would bridge the gap and
+allow users outside of institutions to develop applications using
+their personal computers.
 
-Alan Kay spearheaded the design and implementation of the language (he claims to have written one of the earliest versions of Smalltalk in just a few days after a bet that the most powerful language could fit on just one page!), but an entire team at PARC was responsible for its development through the 1970s \cite{alankay}. Smalltalk finally went public in 1980 when Xerox disseminated information about Smalltalk to six major computer manufacturers. The manufacturers were sent introductory articles, a book detailing Smalltalk's system specifications, and a magnetic tape containing a partial implementation of the Smalltalk system. Of these companies, four\footnote{Apple Computer, Digital Equipment Corporation, Hewlett- Packard, and Tektronix} assisted in the formal specification and implementation of the system, which was released as Smalltalk-80.
+Alan Kay spearheaded the design and implementation of the language (he
+claims to have written one of the earliest versions of Smalltalk in
+just a few days after a bet that the most powerful language could fit
+on just one page!), but an entire team at PARC was responsible for its
+development through the 1970s \cite{alankay}. Smalltalk finally went
+public in 1980 when Xerox disseminated information about Smalltalk to
+six major computer manufacturers. The manufacturers were sent
+introductory articles, a book detailing Smalltalk's system
+specifications, and a magnetic tape containing a partial
+implementation of the Smalltalk system. Of these companies,
+four\footnote{Apple Computer, Digital Equipment Corporation, Hewlett-
+Packard, and Tektronix} assisted in the formal specification and
+implementation of the system, which was released as Smalltalk-80.
 
-The language itself is designed around an object-oriented (OO) programming paradigm, and was influenced by Simula, the world's first OO language. In Smalltalk, everything is an object\footnote{This is actually something of a misnomer. Variables are not objects, but values are.}; numbers, data structures, strings are all examples of objects.  In a full Smalltalk system - which comprises a virtual image with object definitions as well as a virtual machine responsible for running Smalltalk code and interacting with the system -  things like file directories and programs are objects too. 
+The language itself is designed around an object-oriented (OO)
+programming paradigm, and was influenced by Simula, the world's first
+OO language. In Smalltalk, everything is an object\footnote{This is
+actually something of a misnomer. Variables are not objects, but
+values are.}; numbers, data structures, strings are all examples of
+objects.  In a full Smalltalk system - which comprises a virtual image
+with object definitions as well as a virtual machine responsible for
+running Smalltalk code and interacting with the system - things like
+file directories and programs are objects too.
 
-These objects are a combination of data and code. Their data are the variables relevant to the object, while the code is a collection of methods that the object can execute. In terms of functional programming, these methods are kind of like functions that belong to an object. In Smalltalk, the specification of an object is known as the class; each class has an initialize method that can be used to create an instance of the class. Thus, all objects of a certain class will share the same specification \cite{thebluebook}.
+These objects are a combination of data and code. Their data are the
+variables relevant to the object, while the code is a collection of
+methods that the object can execute. In terms of functional
+programming, these methods are kind of like functions that belong to
+an object. In Smalltalk, the specification of an object is known as
+the class; each class has an initialize method that can be used to
+create an instance of the class. Thus, all objects of a certain class
+will share the same specification \cite{thebluebook}.
 
-Smalltalk builds upon previous object-oriented approaches by introducing the concept of message passing. Objects pass messages to other objects in order to invoke each other's methods. This approach enables polymorphism WHICH WE MIGHT DISCUSS LATER. Using Smalltalk, an application or problem should be split into components that can be represented by an object. For example, when designing a pong game, the walls, paddle, bricks, and ball all might be classes of objects. These objects will contain the necessary methods to manage that object. The collection of objects then communicate using messages to perform the desired functionality.
+Smalltalk builds upon previous object-oriented approaches by
+introducing the concept of message passing. Objects pass messages to
+other objects in order to invoke each other's methods. Using
+Smalltalk, an application or problem should be split into components
+that can be represented by an object. For example, when designing a
+pong game, the walls, paddle, bricks, and ball all might be classes of
+objects. These objects will contain the necessary methods to manage
+that object. The collection of objects then communicate using messages
+to perform the desired functionality.
 
-Due to Smalltalk's positive reception and the fact that Xerox gave the companies who helped develop it the rights to use Smalltalk-80 in their products, Smalltalk diffused across the programming community. As an object-oriented language, Smalltalk is used in any context where other object-oriented languages  (like Java or C++) are used. In today's age, this is the majority of software development. Concrete examples of this include Lesser Software, who uses Smalltalk for Windows application development, and eXept, who uses Smalltalk in its automated testing products \cite{exept} \cite{lesser}.
+Due to Smalltalk's positive reception and the fact that Xerox gave the
+companies who helped develop it the rights to use Smalltalk-80 in
+their products, Smalltalk diffused across the programming
+community. As an object-oriented language, Smalltalk is used in any
+context where other object-oriented languages (like Java or C++) are
+used. In today's age, this is the majority of software
+development. Concrete examples of this include Lesser Software, who
+uses Smalltalk for Windows application development, and eXept, who
+uses Smalltalk in its automated testing products \cite{exept}
+\cite{lesser}.
 
-Smalltalk's success has also had a large impact on younger languages and computers in general. Most current languages that are in part OO, including entries like Go, Java, and Ojective-C borrow from the design patterns (like message passing) introduced in Smalltalk. The GUIs that were introduced inside the early Smalltalk systems also set the standard for a lot of the GUIs seen today \cite{influence}. Despite the arrival of many newer OO languages, Smalltalk remains a strong competitor, revered for its simplicity. 
+Smalltalk's success has also had a large impact on younger languages
+and computers in general. Most current languages that are in part OO,
+including entries like Go, Java, and Ojective-C borrow from the design
+patterns (like message passing) introduced in Smalltalk. The GUIs that
+were introduced inside the early Smalltalk systems also set the
+standard for a lot of the GUIs seen today \cite{influence}. Despite
+the arrival of many newer OO languages, Smalltalk remains a strong
+competitor, revered for its simplicity.
 
-\begin{center}
-Smalltalk is an improvement over most of its successors.
+\begin{center} Smalltalk is an improvement over most of its
+successors.
 \end{center}
 
 \begin{flushright}Dave Astels \cite{dave}\end{flushright}
@@ -25,24 +83,54 @@ Smalltalk is an improvement over most of its successors.
 
 \section{Installation}
 
-As a result of continued develop over the decades, many dialects of Smalltalk exist today. Despite presence of dialects like Squeak and Pharo, which are accompanied by fully fledged development environments (similar to Dr. Racket), this paper implements its code section using GNU Smalltalk (GST), whose usage is more in line with popular interpreted languages. Its programs are loaded in the interpreter through text files instead of using a GUI.
+As a result of continued develop over the decades, many dialects of
+Smalltalk exist today. Despite presence of dialects like Squeak and
+Pharo, which are accompanied by fully fledged development environments
+(similar to Dr. Racket), this paper implements its code section using
+GNU Smalltalk (GST), whose usage is more in line with popular
+interpreted languages. Its programs are loaded in the interpreter
+through text files instead of using a GUI.
 
-Precompiled binaries of GST can be installed on Mac OSX using \textbf{brew install gnu-smalltalk} or Debian systems using \textbf{apt install gnu-smalltalk}. Once installed, the binary can be run using the \textbf{gst} command. If any number of files are given to the command as arguments, then their contents are interpreted. If no files are given as arguments however, the interpreter begins running as a read-eval-print loop.
+Precompiled binaries of GST can be installed on Mac OSX using
+\textbf{brew install gnu-smalltalk} or Debian systems using
+\textbf{apt install gnu-smalltalk}. Once installed, the binary can be
+run using the \textbf{gst} command. If any number of files are given
+to the command as arguments, then their contents are interpreted. If
+no files are given as arguments however, the interpreter begins
+running as a read-eval-print loop.
 
 \section{Syntax}
 
-The syntax of Smalltalk is quite small, and is able to fit on a postcard \cite{postcard}. Current Smalltalk implementations conform with the ANSI Smalltalk standard, introduced in 1998 \cite{ansi}.
+The syntax of Smalltalk is quite small, and is able to fit on a
+postcard \cite{postcard}. Current Smalltalk implementations conform
+with the ANSI Smalltalk standard, introduced in 1998 \cite{ansi}.
 
-The meat of Smalltalk syntax is found in the message passing. There are three different kinds of messages: unary, binary, and keyword. Unary messages only involve one object (the receiver) and the message being passed. Keyword messages contain arguments, which are other objects. Binary messages allow mathematical operations to be written in their normal form (e.g '10 + 10' not '10 +: 10') \cite{thebluebook}.
+The meat of Smalltalk syntax is found in the message passing. There
+are three different kinds of messages: unary, binary, and
+keyword. Unary messages only involve one object (the receiver) and the
+message being passed. Keyword messages contain arguments, which are
+other objects. Binary messages allow mathematical operations to be
+written in their normal form (e.g '10 + 10' not '10 +: 10')
+\cite{thebluebook}.
 
-The following code example could be a method found in a Dog class. If a Dog instance is passed the \textbf{bark} message with a numeric argument, it will print out ``woof'' that many times (eg \textbf{aDog bark: 8}). The body of the code is found within the brackets and includes an integer loop. The loop is created by sending an integer object a keyword message with two arguments, the integer to iterate to and the block of code to execute in each iteration.
+The following code example could be a method found in a Dog class. If
+a Dog instance is passed the \textbf{bark} message with a numeric
+argument, it will print out ``woof'' that many times (e.g.,
+\textbf{aDog bark: 8}). The body of the code is found within the
+brackets and includes an integer loop. The loop is created by sending
+an integer object a keyword message with two arguments, the integer to
+iterate to and the block of code to execute in each iteration.
 
-\begin{lstlisting}[language=Simula]
-bark: hoursIntoNight [
-        1 to: hoursIntoNight do: [:x | 'woof' printNl].
-    ]
+\begin{lstlisting}[language=Simula] bark: hoursIntoNight [ 1 to:
+hoursIntoNight do: [:x | 'woof' printNl].  ]
 \end{lstlisting}
 
-One interesting component of Smalltalk syntax is variable declarations. Smalltalk variables come in two forms: instance and temporary variables. Instance variables persist with an object, and are declared outside of any methods. Temporary variables are declared at the start of methods and only last during the execution of that method. Both variable types are declared using the form \textbf{ \textbar var1 var2 ... \textbar }
+One interesting component of Smalltalk syntax is variable
+declarations. Smalltalk variables come in two forms: instance and
+temporary variables. Instance variables persist with an object, and
+are declared outside of any methods. Temporary variables are declared
+at the start of methods and only last during the execution of that
+method. Both variable types are declared using the form \textbf{
+\textbar var1 var2 ... \textbar }
 
 

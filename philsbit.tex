@@ -1,0 +1,60 @@
+\section{Notes on Design}
+
+Smalltalk is a dynamically-typed language in the simplest sense: all
+values are objects, so whether an expression is well-typed or not is
+determined not by a type-checking mechanism but by the availability of
+methods and message-receivers that an object has at its disposal. Thus
+the expression '\$a + \$b' is ill-typed because the characters \$a and
+\$b have no knowledge of the binary addition message. Because it is
+possible to extend any object with any method, the interpreter defers
+checking whether a statement is semantically correct until runtime
+\cite{thebluebook}.
+
+Arguments to methods are passed according to a
+pass-by-object-reference strategy. Even those objects that are
+primitive in other languages (e.g., integers, strings, characters) are
+treated as descendants of the Object class, although there is often
+some under-the-hood optimization occurring. When an object 'x' is
+passed to a method as an argument, that method has access to the
+actual object as if a pointer to the object was passed
+\cite{postcard}. Smalltalk's runtime contains a reference counting
+garbage collector. Objects that are no longer needed in a program are
+deallocated as required.
+
+Functions in Smalltalk are objects like any other value, and since all
+objects are first-class, functions can be passed around as
+data. Anonymous functions are supported, and are implemented as
+closures. In fact, Smalltalk's semantic analyzer considers a
+``block'', or sequence of actions, to comprise some combination of
+lambda expressions or procedure calls that ultimately evaluates to a
+single value object \cite{postcard}. While Smalltalk was envisioned as
+an object-oriented language (complete with multiple inheritance,
+duck-typing, and  many users refer to the language as pseudo-functional,
+since it is possible to write programs using almost-exclusively
+anonymous functions.
+
+Perhaps the most interesting aspect of the Smalltalk standard library
+is its support for concurrent programs. Concurrency is a property of
+programs structured in such a way that it is possible to execute two
+or more of its statements in parallel. Objects and subclasses
+descended from Smalltalk's Process class can be spun into individual
+threads by the interpreter, so program to, for example, factorize a
+large number, can be partitioned into multiple processes and run
+simultaneously. Execution can be halted by sending a \#suspend message
+to a process object, and a process can be killed with a \#terminate
+message. There are even predeclared constants that allow the user to
+specify the priority of processes, which determines the relative order
+of I/O and background device access \cite{postcard}.
+
+\section{Conclusion}
+
+Out of the hundreds of languages that see common use in industry
+today, very few can lay claim to the history and impact of
+Smalltalk. The almost-original object-oriented language pioneered the
+use of virtual machines for interpreting, laying the groundwork for
+just-in-time compilation and languages such as Java and
+Python. Smalltalk introduced the world to development suites, live
+debugging, and modern refactoring techniques. Should the language
+someday fade into true obscurity, its legacy will continue to be felt
+throughout the software development landscape. Which is, in the
+opinion of the authors, all the more reason to preserve it.
